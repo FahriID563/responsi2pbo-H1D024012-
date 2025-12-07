@@ -5,4 +5,20 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 2. Mengapa interface tidak memiliki implementasi method di dalamnya?
 3. Apa tujuan penggunaan keyword "implements" pada sebuah class?
 4. Apakah sebuah class dapat mengimplementasikan lebih dari satu interface? Jelaskan dan berikan contoh sederhana.
-5. Jika sebuah class mengimplementasikan interface, apa yang terjadi jika class tersebut tidak mengimplementasikan semua method dari interface tersebut?
+5. Jika sebuah class mengimplementasikan interface, apa yang terjadi jika class tersebut tidak mengimplementasikan semua method
+dari interface tersebut?
+
+Jawaban : 
+
+1. Interface hanyalah kumpulan deklarasi method (kontrak perilaku) tanpa implementasi dan tanpa state (variabel instance), 
+sedangkan Class adalah cetak biru objek yang memiliki state (atribut) dan perilaku nyata (method 
+dengan body).
+2. untuk pemisahan total antara definisi (apa yang bisa dilakukan) dan implementasi (bagaimana cara melakukannya), serta 
+menghindari ketergantungan pada detail kode tertentu.
+3. tujuannya Untuk mengikat sebuah class dengan interface. Ini menyatakan bahwa class tersebut menyanggupi kontrak untuk 
+menyediakan kode nyata bagi semua method yang didefinisikan dalam interface.
+4. Ya, class bisa mengimplementasikan banyak interface (contoh: implements InterfaceA, InterfaceB). Ini karena interface 
+tidak membawa kode implementasi, sehingga tidak ada risiko konflik logika (diamond problem)
+yang biasa terjadi pada multiple inheritance class.
+5. Class tersebut dianggap tidak lengkap dalam memenuhi kontrak, sehingga harus dideklarasikan sebagai Abstract Class. Class
+tersebut tidak akan bisa dibuat menjadi objek sampai ada subclass lain yang melengkapi implementasinya.
