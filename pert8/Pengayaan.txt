@@ -1,8 +1,26 @@
 Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
 
-
-1. Apa tujuan utama adanya interface dalam pemrograman berorientasi objek, dan bagaimana interface membantu menciptakan kontrak perilaku?
+1. Apa tujuan utama adanya interface dalam pemrograman berorientasi objek, dan bagaimana interface membantu menciptakan kontrak 
+perilaku?
 2. Mengapa interface dapat memiliki banyak implementasi, dan apa makna konseptual dari kemampuan tersebut dalam desain sistem?
-3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
-4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
-5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh
+kode?
+4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan 
+(compatibility) suatu sistem yang sudah berjalan?
+5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa 
+muncul pada multiple inheritance?
+
+Jawaban : 
+
+1. Untuk menciptakan standar komunikasi antar objek yang berbeda tipe. Interface bertindak sebagai "kontrak perilaku", 
+menjamin bahwa objek apa pun yang menggunakannya pasti memiliki kemampuan tertentu yang bisa dipanggil oleh sistem lain.
+2. Kemampuan implementasi banyak interface bermakna bahwa satu objek dalam dunia nyata bisa memiliki banyak peran (role).
+Contoh: Seorang Manusia bisa berperan sebagai Karyawan (bekerja) sekaligus Pengemudi (menyetir).
+3. Perbedaannya yaitu:
+   extends (Class): Mewarisi identitas dan sifat genetik ("Is-A"). Contoh: Singa adalah Hewan.
+   implements (Interface): Mengadopsi kemampuan atau peran ("Can-Do"). Contoh: Singa bisa Berlari.
+4. agar kita bisa menambahkan method baru ke interface tanpa menyebabkan error (breaking changes) pada semua class lama yang 
+sudah mengimplementasikan interface tersebut. Ini menjaga kompatibilitas ke belakang.
+5. Multiple interface memungkinkan sebuah class mengambil fitur/kemampuan dari banyak sumber berbeda tanpa mewarisi variabel
+state yang kompleks. Ini menghindari masalah kerumitan warisan ganda (Diamond Problem) di mana class bingung memilih variabel 
+mana yang harus dipakai jika ada duplikasi di parent.
