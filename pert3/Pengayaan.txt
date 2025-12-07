@@ -8,3 +8,11 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
 
 Jawaban:
+
+1. Keyword extends menandakan pewarisan sifat dari class induk (parent) ke anak (child). 
+2. Dalam pewarisan, overload berarti membedakan parameter di class yang sama, sedangkan override menggunakan parameter sama 
+tapi mengganti isi method di subclass.
+3. Keyword super digunakan untuk memanggil constructor atau atribut parent. 
+4. Karena subclass tidak bisa mengakses atribut private parent secara langsung, solusinya adalah mengubah aksesnya ke protected
+atau menggunakan getter/setter. 
+5. Keuntungan utama inheritance adalah mencegah duplikasi kode (reusability) dan membentuk struktur hierarki.
