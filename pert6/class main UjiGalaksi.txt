@@ -1,41 +1,19 @@
 public class UjiGalaksi {
     public static void main(String[] args) {
+        System.out.println("=== UJI SISTEM KENDARAAN GALAKSI ===\n");
+        System.out.println("--- PESAWAT TEMPUR ---");
+        PesawatTempur p = new PesawatTempur("Astra-Fury", 2, 8);
+        p.aktifkanMesin();
+        p.jelajah(10);
+        p.jelajah(30);
+        p.tembakRudal(3);
+        p.tampilStatus();
 
-        // ==========================================================
-        // PEMBUATAN OBJEK
-        // ==========================================================
-
-        // TODO:
-        // Buat objek PesawatTempur dengan:
-        //   nama: "Astra-Fury"
-        //   kapasitas: 2
-        //   jumlahRudal: 8
-
-
-        // TODO:
-        // Buat objek KapalEksplorasi dengan:
-        //   nama: "Voyager X"
-        //   kapasitas: 10
-        //   modulScan: 4
-
-
-        // ==========================================================
-        // PENGUJIAN PERILAKU
-        // ==========================================================
-
-        // TODO:
-        // Aktifkan mesin pesawat
-        // Pesawat menjelajah 10 km
-	// Pesawat menjelajah 30 km
-        // Pesawat menembak 3 rudal
-        // Tampilkan status pesawat
-
-
-        // TODO:
-        // Aktifkan mesin kapal eksplorasi
-        // Kapal menjelajah 15 km
-        // Kapal melakukan scanPlanet("Kepler-442b")
-        // Tampilkan status kapal
-
+        System.out.println("\n--- KAPAL EKSPLORASI ---");
+        KapalEksplorasi k = new KapalEksplorasi("Voyager X", 10, 4);
+        k.aktifkanMesin();
+        k.jelajah(15);
+        k.scanPlanet("Kepler-442b");
+        k.tampilStatus();
     }
 }
