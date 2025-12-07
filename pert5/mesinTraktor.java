@@ -5,7 +5,8 @@ class mesinTraktor extends defaultMesin {
         this.kapasitasTarik = tarik;
     }
     
-    @Override void tampilInfo() {
+    @Override
+    void tampilInfo() {
         System.out.println("Mesin Traktor " + namaMesin + " | Tarik: " + kapasitasTarik + " ton | Tenaga: " + tenagaHP + " HP");
     }
     
