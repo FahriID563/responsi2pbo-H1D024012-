@@ -6,4 +6,9 @@ Mengapa penting menggunakan konstanta (final variables) dalam suatu kelas? Apa k
 Apa yang terjadi jika kita mencoba mengubah nilai suatu konstanta setelah objek dibuat? Berikan contoh.
 Bagaimana cara mendefinisikan konstanta dalam bahasa Java?
 
-Jawaban
+Jawaban :
+
+Perbedaan mendasar antara fungsi dan prosedur adalah fungsi mengembalikan nilai (return) sedangkan prosedur tidak (void). 
+Konstanta sangat penting digunakan untuk menjaga nilai tetap agar data aman dan konsisten; jika kita mencoba mengubahnya, akan 
+terjadi error saat kompilasi (compile-time error). Dalam Java, konstanta didefinisikan menggunakan keyword final sebelum tipe 
+data.
