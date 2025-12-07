@@ -6,3 +6,15 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
 4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
 5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+
+Jawaban : 
+
+1. Abstract Class Adalah class yang berfungsi sebagai kerangka dasar (blueprint) yang belum lengkap. Kita membutuhkannya untuk menstandarisasi class-class turunannya, memastikan mereka semua memiliki struktur method yang sama meskipun implementasinya berbeda.
+2. perbedaannya yaitu 
+  Class Biasa: Semua method harus punya isi (implementasi), dan bisa diinstansiasi (dibuat objeknya dengan new).
+  Abstract Class: Boleh memiliki method tanpa isi (abstrak), dan tidak bisa diinstansiasi langsung (harus diturunkan dulu).
+3. Karena method abstrak hanyalah sebuah "kontrak" atau janji. Jika subclass tidak 
+mengisinya (mengimplementasikannya), maka subclass tersebut masih dianggap "setengah jadi" dan tidak bisa digunakan (harus 
+jadi abstract juga).
+4. Karena tujuannya hanya mendefinisikan APA yang harus dilakukan, bukan BAGAIMANA caranya ,Detail "bagaimana" diserahkan sepenuhnya kepada subclass yang lebih memahami konteks spesifiknya.
+5. Abstract class memungkinkan kita membuat variabel referensi umum (misal: Kendaraan) yang bisa memanggil method abstrak (misal: bergerak()). Saat dijalankan, masing-masing objek (Pesawat/Kapal) akan merespons dengan cara bergeraknya sendiri-sendiri secara otomatis.
