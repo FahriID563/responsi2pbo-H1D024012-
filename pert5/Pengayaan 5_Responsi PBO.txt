@@ -8,7 +8,7 @@ Jawablah pertanyaan berikut:
 
 Jawaban : 
 
-1. Polimorfisme: Objek diperlakukan sebagai bentuk umum (parent) namun tetap berperilaku spesifik (child).
+1. polimorfisme adalah sebuah metode dimana objek dari kelas berbeda untuk merespons pemanggilan metode dengan nama yang sama dengan perilaku yang berbeda, sementara metode overriding bekerja dengan implementasi polimorfisme dinamis di mana kelas anak menyediakan definisi baru untuk metode yang sudah ada di kelas induk, memungkinkan pemanggilan metode yang benar berdasarkan tipe objek saat runtime (waktu eksekusi)
 2. karena mesinmotor bisa merupakan kelas induknya jadi Bisa menyimpan objek childnya yaitu MesinMotor karena hubungan Is-A (child adalah turunan parent).
 3. perbedaannya yaitu Override mengganti implementasi method warisan; Overload menambah method baru dengan nama sama.
 4. keuntungannya Kode lebih fleksibel, karena bisa memproses banyak tipe objek berbeda dengan satu cara umum.
