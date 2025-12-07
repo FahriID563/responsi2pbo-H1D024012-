@@ -1,49 +1,30 @@
 public class KapalEksplorasi extends KendaraanGalaksi {
+    private int modulScan;
 
-    // ==========================================================
-    // ATRIBUT KHUSUS
-    // ==========================================================
+    public KapalEksplorasi(String nama, int kapasitas, int modulScan) {
+        super(nama, kapasitas);
+        this.modulScan = modulScan;
+    }
 
-    // TODO:
-    // private int modulScan   // kemampuan scan planet (level 1–5)
+    @Override 
+    void aktifkanMesin() {
+        if (levelEnergi < 15) System.out.println("Energi tidak mencukupi!");
+        else System.out.println("Kapal eksplorasi siap berangkat!");
+    }
 
+    @Override 
+    void jelajah(int jarak) {
+        if (levelEnergi >= jarak * 2) {
+            levelEnergi -= jarak * 2;
+            System.out.println("Kapal eksplorasi menjelajah sejauh " + jarak + " km.");
+        } else System.out.println("Energi tidak cukup.");
+    }
 
-    // ==========================================================
-    // CONSTRUCTOR
-    // ==========================================================
+    @Override 
+    void isiEnergi(int jumlah) { levelEnergi = Math.min(100, levelEnergi + jumlah); 
+    }
 
-    // TODO:
-    // Constructor menerima:
-    //   - namaKendaraan
-    //   - kapasitasPenumpang
-    //   - modulScan
-
-
-    // ==========================================================
-    // IMPLEMENTASI ABSTRACT METHOD
-    // ==========================================================
-
-    // @Override aktifkanMesin()
-    // Jika energi < 15 → "Energi tidak mencukupi untuk memulai ekspedisi!"
-    // Jika cukup → "Kapal eksplorasi siap berangkat!"
-
-
-    // @Override jelajah(int jarak)
-    // Konsumsi energi: 2% per 1 km (lebih efisien).
-    // Jika cukup → kurangi energi & tampilkan jarak perjalanan.
-
-
-    // @Override isiEnergi(int jumlah)
-    // Tambah energi secara bertahap sampai 100%.
-    // Tampilkan pesan pengisian.
-
-
-    // ==========================================================
-    // METHOD KHUSUS
-    // ==========================================================
-
-    // TODO:
-    // void scanPlanet(String namaPlanet)
-    // Tampilkan:
-    // "Melakukan scan pada planet [namaPlanet] dengan modul level [modulScan]."
+    void scanPlanet(String nama) {
+        System.out.println("Melakukan scan pada planet " + nama + " dengan modul level " + modulScan + ".");
+    }
 }
