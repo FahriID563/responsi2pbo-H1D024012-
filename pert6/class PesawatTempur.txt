@@ -1,53 +1,33 @@
 public class PesawatTempur extends KendaraanGalaksi {
+    private int jumlahRudal;
 
-    // ==========================================================
-    // ATRIBUT KHUSUS
-    // ==========================================================
+    public PesawatTempur(String nama, int kapasitas, int jumlahRudal) {
+        super(nama, kapasitas);
+        this.jumlahRudal = jumlahRudal;
+    }
 
-    // TODO:
-    // private int jumlahRudal
+    @Override 
+    void aktifkanMesin() {
+        if (levelEnergi < 20) System.out.println("Energi terlalu rendah! Mesin tidak dapat diaktifkan.");
+        else System.out.println("Mesin pesawat tempur diaktifkan.");
+    }
 
+    @Override 
+    void jelajah(int jarak) {
+        if (levelEnergi >= jarak * 3) {
+            levelEnergi -= jarak * 3;
+            System.out.println("Pesawat tempur menjelajah sejauh " + jarak + " km.");
+        } else System.out.println("Energi tidak mencukupi untuk menjelajah sejauh " + jarak + " km.");
+    }
 
-    // ==========================================================
-    // CONSTRUCTOR
-    // ==========================================================
+    @Override 
+    void isiEnergi(int jumlah) { levelEnergi = Math.min(100, levelEnergi + jumlah); 
+    }
 
-    // TODO:
-    // Constructor menerima:
-    //   - namaKendaraan
-    //   - kapasitasPenumpang
-    //   - jumlahRudal
-    // Panggil super(...) untuk parent.
-
-
-    // ==========================================================
-    // IMPLEMENTASI ABSTRACT METHOD
-    // ==========================================================
-
-    // @Override aktifkanMesin()
-    // Jika energi < 20 → tampilkan "Energi terlalu rendah! Mesin tidak dapat diaktifkan."
-    // Jika cukup → tampilkan "Mesin pesawat tempur diaktifkan."
-
-
-    // @Override jelajah(int jarak)
-    // Konsumsi energi: 3% per 1 km.
-    // Jika energi tidak cukup → tampilkan pesan gagal.
-    // Jika cukup → kurangi energi dan tampilkan:
-    // "Pesawat tempur menjelajah sejauh [jarak] km."
-
-
-    // @Override isiEnergi(int jumlah)
-    // Tambah energi sampai max 100%.
-    // Tampilkan pesan peningkatan energi.
-
-
-    // ==========================================================
-    // METHOD KHUSUS
-    // ==========================================================
-
-    // TODO:
-    // void tembakRudal(int jumlah)
-    // - Jika jumlahRudal cukup → kurangi dan tampilkan:
-    //   "Menembakkan [jumlah] rudal!"
-    // - Jika tidak cukup → tampilkan pesan gagal.
+    void tembakRudal(int jumlah) {
+        if (jumlahRudal >= jumlah) {
+            jumlahRudal -= jumlah;
+            System.out.println("Menembakkan " + jumlah + " rudal!");
+        } else System.out.println("Gagal menembak.");
+    }
 }
