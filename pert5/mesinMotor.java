@@ -1,27 +1,25 @@
-class mesinMotor extends defaultMesin {
-    // Variabel khusus mesin motor (tipeMotor)
 
-    // Constructor
+class mesinMotor extends defaultMesin {
+    String tipeMotor;
     mesinMotor(String nama, int hp, String tipe) {
         super(nama, hp);
+        this.tipeMotor = tipe;
     }
-
-    @Override
+    
+    @Override 
     void tampilInfo() {
-        // Override info mesin motor
+        System.out.println("Mesin Motor " + namaMesin + " | Tipe: " + tipeMotor + " | Tenaga: " + tenagaHP + " HP");
     }
-
-    @Override
+    
+    @Override 
     double nilaiPerforma() {
-        // Override performa mesin motor
+        return tenagaHP * 1.2; 
     }
-
+    
     @Override
-    String kategoriMesin() {
-        // Override kategori
+    String kategoriMesin() { 
+        return "Mesin Motor"; 
     }
-
-    void suaraMesin() {
-        // Suara mesin motor
-    }
+    
+    void suaraMesin() { System.out.println("Brummm! Mesin motor menyala!"); }
 }
