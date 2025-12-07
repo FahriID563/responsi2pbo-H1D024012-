@@ -7,4 +7,10 @@ Apa perbedaan antara mengakses variabel secara langsung (misalnya: objek.variabe
 Jelaskan konsep encapsulation dan bagaimana method dapat membantu melindungi data dalam sebuah class!
 Mengapa constructor tidak memiliki return type, bahkan tidak menggunakan kata kunci void?
 
-Jawaban
+Jawaban : 
+
+Constructor overloading adalah pembuatan beberapa constructor dengan parameter berbeda dalam satu class, yang dibedakan oleh 
+Java berdasarkan jumlah, tipe, dan urutan parameternya (signature). Terkait akses data, penggunaan setter lebih aman daripada 
+akses langsung karena memungkinkan validasi, sejalan dengan konsep encapsulation yang membungkus data (private) agar 
+terlindungi. Constructor tidak memiliki return type karena tugas khususnya hanyalah menginisialisasi objek baru, bukan 
+menghitung nilai.
